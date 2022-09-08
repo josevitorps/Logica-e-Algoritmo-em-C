@@ -1,0 +1,18 @@
+a) Apple.
+b) IBM Personal Computer.
+c) programas de computador.
+d) Unidade de entrada, saída, memória, CPU, ULA, armazenamento secundário.
+e) timesharing.
+f) Linguagens de máquina, Assembly e Alto Nível.
+g) Compiladores.
+h) UNIX.
+i) ANSI.
+j) Pascal.
+k) multitasking.
+
+a) editor
+b) pré processador.
+c) #include e #define
+d) linker.
+e) carregador.
+f) ./a.out
