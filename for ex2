@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+
+setlocale(LC_ALL,"Portuguese");
+
+//Declarando as variáveis
+int idade, quantidade_de_idades, cont_idades, soma_das_idades = 0;
+float media;
+
+//Inicializando o programa
+printf("Quantas idades você gostaria de inserir: \n");
+scanf("%i", &quantidade_de_idades);
+
+for(cont_idades=1;cont_idades<=quantidade_de_idades;cont_idades++){
+    printf("\nDigite a idade: ");
+    scanf("%i", &idade);
+    soma_das_idades = soma_das_idades + idade;
+}
+
+//Calculando a média das idades adicionadas
+media = soma_das_idades/quantidade_de_idades;
+printf("\nA média das idades é: %.1f", media);
+}
