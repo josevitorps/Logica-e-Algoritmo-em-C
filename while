@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+
+setlocale(LC_ALL,"Portuguese");
+
+//Declarando as variáveis
+int quantidade_alunos = 0, quantidade_notas = 1, media_negativa = 0;
+float media_da_turma, nota1, nota2, nota3, media_do_aluno, soma_nota_aluno, soma_media;
+
+//Iniciando o laço de repetição
+while (quantidade_alunos <5){
+    printf("Digite a primeira nota: ");
+    scanf("%f", &nota1);
+    printf("\nDigite a segunda nota: ");
+    scanf("%f", &nota2);
+    printf("\nDigite a terceira nota: ");
+    scanf("%f", &nota3);
+    quantidade_alunos++;
+    
+//Verificando se inseriu uma nota válida    
+    while((nota1 < 0 || nota1 > 100) || (nota2 < 0 || nota2 > 100) || (nota3 < 0 || nota3 > 100)){
+        printf("\nÉ preciso que seja uma nota com um valor entre 0 e 100. Digite as notas novamente.\n");
+        printf("\nDigite a primeira nota: ");
+        scanf("%f", &nota1);
+        printf("\nDigite a segunda nota: ");
+        scanf("%f", &nota2);
+        printf("\nDigite a terceira nota: ");
+        scanf("%f", &nota3);
+    }
+    
+//Realizando os calculos sobre as notas dos alunos e as médias
+        soma_nota_aluno = nota1 + nota2 + nota3;
+        media_do_aluno = soma_nota_aluno/3;
+        media_da_turma = media_da_turma + media_do_aluno;
+        
+//Verificando se a média do aluno é 60
+    if (media_do_aluno < 60)
+        media_negativa++;
+        
+        printf("\nA media do aluno %i é: %.2f\n", quantidade_alunos, media_do_aluno);
+}
+
+    soma_media = media_da_turma/5;
+    printf("\nA média total da turma é: %.2f", soma_media);
+    printf("\nEstão abaixo da media: %i", media_negativa);
+}
