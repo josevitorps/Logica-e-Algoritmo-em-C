@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+
+setlocale(LC_ALL,"Portuguese");
+
+//Declarando as variáveis
+int numeros, valores, numero_de_pares = 0;
+
+//Inicializando o programa
+for(valores=1;valores<=10;valores++){
+    printf("Digite o número: ");
+    scanf("%i", &numeros);
+    if(numeros%2 == 0){
+        numero_de_pares = numero_de_pares + 1;
+    }
+}
+printf("\nA quantidade de números pares é: %i\n", numero_de_pares); 
+printf("\nA quantidade de números impares é: %i", 10 - numero_de_pares); 
+}
