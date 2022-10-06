@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <locale.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main()
+{
+
+setlocale(LC_ALL,"Portuguese");
+
+//Declarando as variáveis
+int x;
+
+//Inicializando o programa
+printf("Mostrar todos os números múltiplos de 3 que estejam entre o intervalo 2 e 122.\n");
+
+//Estruturando o laço de repetição
+for(x=2;x<=122;x++){
+    if(x%3==0){
+        printf("\nOs números múltiplos de 3 são os seguintes: %i", x);
+    }
+}
+}
